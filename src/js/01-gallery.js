@@ -4,6 +4,7 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 import { galleryItems } from './gallery-items';
 // Change code below this line
 
+const gallery = document.querySelector(".gallery");
 const createGallery = galleryItems.map(
   (galleryItem) =>
     `<li>
@@ -28,4 +29,3 @@ const lightbox = new SimpleLightbox(".gallery a", {
 lightbox.on("show.simplelightbox");
 
 console.log(galleryItems);
-
