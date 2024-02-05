@@ -31,9 +31,14 @@ feedbackForm.addEventListener('submit', event => {
   const {
     elements: { email, message },
   } = event.currentTarget;
+
+if (email.value === '' || message.value === '') {
+  alert("Fill in all the fields, please.")
+  return; 
+} 
   const newSubmit = { email: email.value, message: message.value };
   console.log('Your data :', newSubmit);
   email.value = '';
   message.value = '';
-  localStorage.clear();
+  feedbackForm.reset()
 });
